@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Artist Dashboard - Secure Music dApp</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <main class="login-container">
+
+    <section class="login-card dashboard-card">
+
+      <h1>Artist Dashboard</h1>
+
+      <p class="subtitle">
+        Blockchain Access Management
+      </p>
+
+      <h2>Blockchain Status</h2>
+
+      <pre id="chainStatus">
+Checking blockchain connection...
+      </pre>
+
+      <button id="refreshChain">
+        Refresh Blockchain Status
+      </button>
+
+      <hr>
+
+      <h2>1. Register Music Track</h2>
+
+      <p>
+        Select a sample audio file to register
+        its SHA-256 hash on the blockchain.
+      </p>
+
+      <label for="audioFile">Select audio file</label>
+
+      <input
+        type="file"
+        id="audioFile"
+        accept=".mp3,.wav,.flac,.ogg,audio/*"
+      >
+
+      <button id="registerTrack">
+        Register Track
+      </button>
+
+      <button id="uploadEncrypted" type="button">
+  Upload & Encrypt Registered Track
+</button>
+
+      <hr>
+
+      <h2>2. Manage Collaborator Access</h2>
+
+      <label for="trackId">Track ID</label>
+
+      <input
+        type="text"
+        id="trackId"
+        placeholder="0x... 64 hexadecimal characters"
+      >
+
+      <label for="collaboratorWallet">
+        Collaborator Wallet Address
+      </label>
+
+      <input
+        type="text"
+        id="collaboratorWallet"
+        placeholder="0x... collaborator wallet"
+      >
+
+      <button id="grantAccess">
+        Grant Access
+      </button>
+
+      <button id="checkAccess">
+        Check Access
+      </button>
+
+      <button id="revokeAccess" class="danger-button">
+        Revoke Access
+      </button>
+
+      <hr>
+
+
+<hr>
+
+<h2>3. Playback Authorization Test</h2>
+
+<p>
+  Test blockchain permission checks and temporary
+  playback sessions.
+</p>
+
+<button id="startPlaybackSession" type="button">
+  Request Playback Session
+</button>
+
+<button id="checkPlaybackSession" type="button">
+  Recheck Playback Permission
+</button>
+
+<pre id="playbackTestStatus" aria-live="polite">
+No playback session started.
+</pre>
+
+
+<hr>
+
+<h2>4. Protected Music Player</h2>
+
+<p>
+  Audio can only be loaded with a valid playback
+  session and active blockchain permission.
+</p>
+
+<button id="loadAuthorizedAudio" type="button">
+  Load Authorized Audio
+</button>
+
+<audio
+  id="secureAudioPlayer"
+  controls
+  controlsList="nodownload noplaybackrate"
+  disableRemotePlayback
+  preload="none"
+  style="display:block; width:100%; margin-top:20px;">
+</audio>
+
+<pre id="audioPlaybackStatus" aria-live="polite">
+No audio loaded.
+</pre>
+
+
+
+      <h2>Transaction / Test Results</h2>
+
+      <pre id="actionStatus" aria-live="polite">
+Ready for blockchain interaction.
+      </pre>
+
+      <p class="help-text">
+        <a href="/">Back to Login</a>
+      </p>
+
+    </section>
+
+  </main>
+
+  <script src="/vendor/ethers.umd.min.js"></script>
+  <script src="/artist.js"></script>
+
+</body>
+
+</html>

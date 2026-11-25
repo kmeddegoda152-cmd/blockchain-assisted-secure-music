@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+.login-container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    width: 400px;
+
+    background-color: white;
+
+    padding: 40px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.login-card h1 {
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+
+    margin-bottom: 30px;
+}
+
+#connectWallet {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #222;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+#connectWallet:hover {
+    background-color: #444;
+}
+
+#walletStatus {
+    margin-top: 20px;
+
+    font-size: 14px;
+
+    color: #666;
+}
+/* New buttons and status messages for Milestone 2 */
+#signIn, #testProtected, #signOut {
+    width: 100%;
+    padding: 12px;
+    margin-top: 16px;
+    border: none;
+    border-radius: 6px;
+    background: #222;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+#signIn:disabled, #testProtected:disabled, #connectWallet:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+#signOut.secondary-button { background: #e8eaed; color: #222; }
+#signOut.secondary-button:hover { background: #d9dde2; }
+#signOut[hidden] { display: none; }
+#authStatus, #testStatus { margin-top: 12px; font-size: 14px; overflow-wrap: anywhere; }
+#authStatus.success, #testStatus.success { color: #137343; font-weight: bold; }
+.help-text { font-size: 12px; color: #666; margin-top: 20px; line-height: 1.5; }
+
+/* Artist Dashboard */
+
+#chainStatus {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f0f2f5;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.8;
+    text-align: left;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+#refreshChain {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Track Management Dashboard */
+
+.dashboard-card {
+    width: min(92vw, 700px);
+    max-width: 700px;
+    text-align: left;
+    margin: 30px auto;
+}
+
+.dashboard-card h1,
+.dashboard-card .subtitle {
+    text-align: center;
+}
+
+.dashboard-card h2 {
+    margin: 22px 0 12px;
+    font-size: 20px;
+}
+
+.dashboard-card label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 15px 0 6px;
+}
+
+.dashboard-card input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.dashboard-card button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.dashboard-card button:hover {
+    background: #444;
+}
+
+.dashboard-card button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.dashboard-card .danger-button {
+    background: #aa2929;
+}
+
+.dashboard-card hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 25px 0;
+}
+
+.dashboard-card pre {
+    background: #f0f2f5;
+    padding: 15px;
+    border-radius: 6px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.dashboard-card .help-text {
+    margin-top: 25px;
+    text-align: center;
+}

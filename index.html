@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Music dApp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="login-container">
+    <section class="login-card">
+      <h1>Secure Music dApp</h1>
+      <p class="subtitle">Secure access to pre-release music</p>
+
+      <button id="connectWallet">1. Connect Wallet</button>
+      <p id="walletStatus" aria-live="polite">Wallet not connected</p>
+
+      <button id="signIn" disabled>2. Sign In Securely</button>
+      <p id="authStatus" aria-live="polite">Not authenticated</p>
+
+      <button id="testProtected" disabled>3. Test Protected Route</button>
+      <p id="testStatus" aria-live="polite"></p>
+
+      <button id="signOut" class="secondary-button" hidden>Sign Out</button>
+      <p class="help-text">
+  <a href="/artist.html">Open Artist Dashboard</a>
+</p>
+      <p class="help-text">Signing a login message is free. No cryptocurrency is required.</p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

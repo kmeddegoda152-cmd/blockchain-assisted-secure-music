@@ -1,0 +1,68 @@
+node_modules/
+.env
+.env.*
+*.log
+.DS_Store
+coverage/
+private-audio/
+.venv/
+watermarking/samples/
+watermarking/output/
+watermarking/watermark.key
+.venv-piper/
+watermarking/evidence/
+.local-backups/
+# Additional GitHub safety exclusions
+# Confidential music and encrypted audio
+*.mp3
+*.wav
+*.m4a
+*.flac
+*.aac
+*.ogg
+*.enc
+
+# Private keys, certificates and secrets
+*.pem
+*.p12
+*.pfx
+*.key
+*.keystore
+*.secret
+*.secrets
+*mnemonic*
+*seed-phrase*
+*private-key*
+secrets/
+.secrets/
+
+# Local databases and generated blockchain files
+*.sqlite
+*.sqlite3
+*.db
+blockchain/cache/
+blockchain/artifacts/
+blockchain/ignition/deployments/
+
+# Python generated files
+__pycache__/
+*.pyc
+*.pyo
+
+# Old code backups
+*.bak
+*.backup
+*.disabled
+
+# Local AI development tools
+.agents/
+.claude
+AGENTS.md
+CLAUDE.md
+
+# Additional local configuration
+.env.*
+.DS_Store
+
+# Large Piper voice model files
+watermarking/voices/*.onnx
